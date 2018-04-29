@@ -10,34 +10,33 @@
 
 <body>
   <div class='wrapper'>
-    <header>
-      <h1>Bookmarklet Creator</h1>
-      <p class="status">Tunnel: <a href="{{ url }}">{{ url }}</a></p>
-    </header>
     <main>
-      <div class="row">
-        <div class="column">
-          <h3><span class="indicator"></span>Development</h3>
-          <a class="button" id="devBookmarklet" href="{{ dev }}">Dev Bookmarklet 📡</a>
-          <br />
-          <br />
-          <small>This link will change as you edit the file as long as the dev server is still running.</small>
-        </div>
-        <div class="column">
-          <h3>Final bookmarklet</h3>
-          <a class="button dark" id="finalBookmarklet" href="{{final}}">Final Bookmarklet</a>
-          <br />
-          <br />
-          <small>Compiled on page load. Refresh the page to recompile bookmarklet.</small>
+      <header>
+        <h1>Bookmarklet Maker</h1>
+        <p class="status">Tunnel: <a href="{{ url }}">{{ url }}</a></p>
+      </header>
+      <div class="content">
+        <p class="instructions">Instructions: Drag and drop the links to your bookmarks bar</p><br>
+        <div class="row">
+          <div class="column">
+            <h3 class="indicatorContainer"><span class="indicator"></span>Development</h3>
+            <a class="button" id="devBookmarklet" href="{{ dev }}">Dev Bookmarklet 📡</a>
+            <br />
+            <small>This link will change as you edit the file as long as the dev server is still running.</small>
+          </div>
+          <div class="column divider">
+          </div>
+          <div class="column">
+            <h3>Final bookmarklet</h3>
+            <a class="button dark" id="finalBookmarklet" href="{{final}}">Final Bookmarklet</a>
+            <br />
+            <small>Compiled on page load.<br />Refresh the page to recompile bookmarklet.</small>
+          </div>
         </div>
       </div>
     </main>
-  </div>
-  <div class="wrapper">
     <footer>
-      <p>
-        🎨 & 🖥 by <a href="http://samuelbernhardt.com" target="_blank">Samuel Bernhardt</a>
-      </p>
+      <p>🎨  &  🖥  by <a href="http://samuelbernhardt.com" target="_blank">Samuel Bernhardt</a></p>
     </footer>
   </div>
   <script>
