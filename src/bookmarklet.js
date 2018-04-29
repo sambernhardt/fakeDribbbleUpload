@@ -112,8 +112,6 @@ function uploadShot(file) {
   shotContainer.insertBefore(newShot, shots[0]);
 }
 
-// lolss
-
 try {
   window.fakeDribbbleUpload.openModal()
 } catch (error) {
