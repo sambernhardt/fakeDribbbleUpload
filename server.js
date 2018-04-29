@@ -4,9 +4,11 @@ var localtunnel = require('localtunnel');
 var fs = require('fs');
 var port = 3000;
 var Mustache = require('mustache');
+var open = require('open');
 
 var state = {
-  server: {}
+  server: {},
+  i: 0
 }
 
 function bookmarkleter(script) {
@@ -18,17 +20,13 @@ const tunnel = localtunnel(port, (err, tunnel) => {
     state.server.url = tunnel.url;
     state.server.status = tunnel._status;
 
-    console.log("Bookmarklet running on tunnel server: " + tunnel.url)
+    console.log("Bookmarklet served on tunnel server: " + tunnel.url)
 
     state.devBookmarklet =  `
-      if (document.querySelector('#devBookmarklet')) {
-        console.log("Script already exists");
-      } else {
-        var script = document.createElement('script');
-        script.src = '${tunnel.url}/bookmarklet.js';
-        script.id = 'devBookmarklet';
-        document.querySelector('body').appendChild(script);
-      }
+      var script = document.createElement('script');
+      script.src = '${tunnel.url}/bookmarklet.js';
+      script.id = 'devBookmarklet';
+      document.querySelector('body').appendChild(script);
     `;
 
 });
@@ -52,11 +50,18 @@ app.get('/', function(req, res) {
   }, 1000)
 })
 
-// app.get('/api/status', function(req, res) {
-//   res.send(state)
-// })
+app.get('/api/status', function(req, res) {
+  res.json(state);
+})
+
+// setTimeout(function() {
+//   state.i = 100;
+// },5000)
 
 app.use(express.static('src'))
 app.use(express.static('public'))
 
-app.listen(port, console.log("Bookmarklet running locally on port 3000."));
+app.listen(port, function () {
+  console.log("Bookmarklet served locally on port 3000.")
+  open('http://localhost:'+port)
+});
