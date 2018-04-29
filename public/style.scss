@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+}
+
+main {
+  max-width: 940px;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgb(61, 58, 219);
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  &:hover {
+    opacity: .75;
+  }
+}
