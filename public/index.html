@@ -9,25 +9,38 @@
 </head>
 
 <body>
-  <main>
-    <h1>Bookmarklet Creator</h1>
-    <!-- <p>Dev server currently running on: {{ url }}</p> -->
-    <h3>Development:</h3>
-    <a class="button" id="devBookmarklet" href="{{ dev }}">Dev Bookmarklet 📡</a>
-    <br />
-    <br />
-    <small>This link will change as you edit the file as long as the dev server is still running.</small>
-    <br />
-    <br />
-    <br />
-    <h3>Final bookmarklet:</h3>
-    <a class="button" id="finalBookmarklet" href="{{final}}">Final Bookmarklet</a>
-    <br />
-    <br />
-    <small>This link will be your final compiled bookmarklet.</small>
-  </main>
+  <div class='wrapper'>
+    <header>
+      <h1>Bookmarklet Creator</h1>
+      <p class="status">Tunnel: <a href="{{ url }}">{{ url }}</a></p>
+    </header>
+    <main>
+      <div class="row">
+        <div class="column">
+          <h3><span class="indicator"></span>Development</h3>
+          <a class="button" id="devBookmarklet" href="{{ dev }}">Dev Bookmarklet 📡</a>
+          <br />
+          <br />
+          <small>This link will change as you edit the file as long as the dev server is still running.</small>
+        </div>
+        <div class="column">
+          <h3>Final bookmarklet</h3>
+          <a class="button dark" id="finalBookmarklet" href="{{final}}">Final Bookmarklet</a>
+          <br />
+          <br />
+          <small>Compiled on page load. Refresh the page to recompile bookmarklet.</small>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="wrapper">
+    <footer>
+      <p>
+        🎨 & 🖥 by <a href="http://samuelbernhardt.com" target="_blank">Samuel Bernhardt</a>
+      </p>
+    </footer>
+  </div>
   <script>
-
     // fetch('http://localhost:3000/api/status')
     //   .then(res => res.json())
     //   .then(data => handleResponse(data))
@@ -39,4 +52,5 @@
     // }
   </script>
 </body>
+
 </html>

@@ -21,9 +21,14 @@ const tunnel = localtunnel(port, (err, tunnel) => {
     console.log("Bookmarklet running on tunnel server: " + tunnel.url)
 
     state.devBookmarklet =  `
-      var script = document.createElement('script');
-      script.src = '${tunnel.url}/bookmarklet.js';
-      document.querySelector('body').appendChild(script);
+      if (document.querySelector('#devBookmarklet')) {
+        console.log("Script already exists");
+      } else {
+        var script = document.createElement('script');
+        script.src = '${tunnel.url}/bookmarklet.js';
+        script.id = 'devBookmarklet';
+        document.querySelector('body').appendChild(script);
+      }
     `;
 
 });
