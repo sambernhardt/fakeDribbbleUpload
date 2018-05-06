@@ -18,14 +18,12 @@ Clone the project and install the dependencies.
 ### 1. Start local server
 - In the project directory, run `npm start` in the terminal.
 
-<br>
 [What's going on here?](#start-local-server)<br>
 [Troubleshooting](#start-local-server-1)
 
 ### 2. Use Dev. Bookmarklet
 - Drag the development link to your bookmark bar
 
-<br>
 [What's going on here?](#use-dev-bookmarklet)<br>
 [Troubleshooting](#use-dev-bookmarklet-1)
 
@@ -35,9 +33,7 @@ Clone the project and install the dependencies.
 ### 3. Develop and Test
 - Edit `bookmarklet.js` file and re-run the dev bookmarklet.
 
-<br>
 [What's going on here?](#develop-and-test)<br>
-[Troubleshooting](#develop-and-test-1)
 
 ![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/edit.gif)
 
@@ -50,7 +46,7 @@ Clone the project and install the dependencies.
   **or**
 - Save compiled version found in `dist/bookmarklet.min.js`
 
-<br>
+
 ![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/final.gif)
 
 <br>
@@ -65,9 +61,6 @@ Clone the project and install the dependencies.
 - The dev bookmarklet injects `bookmarklet.js` into the desired page by using the tunnel server.
 
 #### Develop and Test
-- No description
-
-#### Save
 - No description
 
 <br>
