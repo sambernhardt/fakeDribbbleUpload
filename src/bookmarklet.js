@@ -1,1 +1,1 @@
-alert("Bookmarklet Loaded!")
+alert("Hello world!")
