@@ -16,7 +16,7 @@ gulp.task('scripts', function() {
 })
 
 gulp.task('styles', function() {
-  gulp.src('public/*.scss')
+  gulp.src('server/styles/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('server/styles/'))
 })

@@ -18,14 +18,13 @@ Clone the project and install the dependencies.
 ### 1. Start local server
 - In the project directory, run `npm start` in the terminal.
 
-[What's going on here?](#start-local-server)<br>
-[Troubleshooting](#start-local-server-1)
+<sub>[What's going on here?](#start-local-server) | [Troubleshooting](#start-local-server-1)</sub>
 
 ### 2. Use Dev. Bookmarklet
 - Drag the development link to your bookmark bar
 
-[What's going on here?](#use-dev-bookmarklet)<br>
-[Troubleshooting](#use-dev-bookmarklet-1)
+<sub>[What's going on here?](#use-dev-bookmarklet) |
+[Troubleshooting](#use-dev-bookmarklet-1)</sub>
 
 
 ![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarklet-creator/master/assets/dev.gif)
@@ -33,7 +32,7 @@ Clone the project and install the dependencies.
 ### 3. Develop and Test
 - Edit `bookmarklet.js` file and re-run the dev bookmarklet.
 
-[What's going on here?](#develop-and-test)<br>
+<sub>[What's going on here?](#develop-and-test)</sub>
 
 ![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarklet-creator/master/assets/edit.gif)
 

@@ -16,7 +16,7 @@
         <p class="status">Tunnel: <a href="{{ url }}">{{ url }}</a></p>
       </header>
       <div class="content">
-        <p class="instructions">Instructions: Drag and drop the links to your bookmarks bar</p><br>
+        <p class="instructions">Drag and drop the links to your bookmarks bar</p><br>
         <div class="row">
           <div class="column">
             <h3 class="indicatorContainer"><span class="indicator"></span>Development</h3>
@@ -40,19 +40,32 @@
     </footer>
   </div>
   <script>
-    // checkConnection();
-    //
-    // function checkConnection() {
-    //   fetch('http://localhost:3000/api/status')
-    //     .then(function(res) {return res.json()})
-    //     .then(function(data) {
-    //       if (data.i === 100) {
-    //         alert("Something happened")
-    //       } else {
-    //         checkConnection()
-    //       }
-    //     })
-    // }
+    checkConnection();
+
+    function sleeper(ms) {
+      return function(x) {
+        return new Promise(resolve => setTimeout(() => resolve(x), ms));
+      };
+    }
+
+    function checkConnection() {
+      fetch('http://localhost:3000/api/status')
+        .then(function(res) {return res.json()})
+        .catch((err) => {
+          console.log(err);
+          document.querySelector('body').classList.add('disconnected');
+          document.querySelector('.status').textContent = "Server disconnected. Please retry in the console.";
+        })
+        .then(sleeper(2000))
+        .then(function(data) {
+          console.log("Returned data");
+          if (data.tunnelClosed) {
+            alert("Tunnel is closed")
+          } else {
+            checkConnection()
+          }
+        })
+    }
   </script>
 </body>
 

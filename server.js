@@ -7,9 +7,10 @@ var express = require('express');
   var Mustache = require('mustache');
   var open = require('open');
   var state = {
-  server: {},
-  i: 0
-}
+    server: {},
+    i: 0,
+    tunnelClosed: false
+  }
 
 // helpers
 function bookmarkleter(script) {
@@ -30,10 +31,19 @@ function devBookmarklet(url) {
 
 // tunnel
 const tunnel = localtunnel(port, (err, tunnel) => {
+  if (err) {
+    tunnelClosed = true;
+  }
+
   console.log("Bookmarklet served on tunnel server: " + tunnel.url)
   state.server.url = tunnel.url;
   state.server.status = tunnel._status;
   state.devBookmarklet =  devBookmarklet(tunnel.url);
+});
+
+tunnel.on('close', function() {
+    // tunnels are closed
+    tunnelClosed = true;
 });
 
 // express

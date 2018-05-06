@@ -5,6 +5,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 0 0 0; }
+  body.disconnected header {
+    background: #d94e4e; }
+  body.disconnected h3.indicatorContainer .indicator {
+    color: #d94e4e;
+    animation: none; }
 
 h1, h2, h3, h4, h5, p {
   margin-top: 0;
