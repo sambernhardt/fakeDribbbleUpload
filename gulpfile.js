@@ -6,7 +6,7 @@ var sass = require('gulp-sass');
 
 gulp.task('default', function(callback) {
   gulp.watch(['src/bookmarklet.js'], ['scripts']);
-  gulp.watch(['public/styles/style.scss'], ['styles']);
+  gulp.watch(['server/styles/style.scss'], ['styles']);
 })
 
 gulp.task('scripts', function() {
@@ -16,8 +16,7 @@ gulp.task('scripts', function() {
 })
 
 gulp.task('styles', function() {
-  console.log();
   gulp.src('public/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('public/styles/'))
+    .pipe(gulp.dest('server/styles/'))
 })

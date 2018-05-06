@@ -18,6 +18,9 @@ function bookmarkleter(script) {
 }
 function devBookmarklet(url) {
   return `
+    if (document.querySelector('#devBookmarklet')) {
+      document.querySelector('#devBookmarklet').remove();
+    }
     var script = document.createElement('script');
     script.src = '${url}/bookmarklet.js';
     script.id = 'devBookmarklet';
@@ -37,7 +40,7 @@ const tunnel = localtunnel(port, (err, tunnel) => {
 app.get('/', function(req, res) {
 
   var file = fs.readFileSync('dist/bookmarklet.min.js','utf8');
-  var htmlTemplate = fs.readFileSync('public/index.html','utf8');
+  var htmlTemplate = fs.readFileSync('server/index.html','utf8');
 
   // wait for tunnel to initiate
   setTimeout(function() {
@@ -55,7 +58,7 @@ app.get('/api/status', function(req, res) {
 })
 
 app.use(express.static('src'))
-app.use(express.static('public'))
+app.use(express.static('server'))
 app.listen(port, function () {
   console.log("Bookmarklet served locally on port 3000.")
   open('http://localhost:'+port)
