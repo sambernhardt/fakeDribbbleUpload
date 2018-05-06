@@ -7,8 +7,8 @@ An easy way to test and develop bookmarklets.
 # Setup
 Clone the project and install the dependencies.
 
-1. `git clone https://github.com/sambernhardt/bookmarkletcreator.git`
-2. `cd bookmarkletcreator`
+1. `git clone https://github.com/sambernhardt/bookmarklet-creator.git`
+2. `cd bookmarklet-creator`
 3. `npm install`
 
 <br>
@@ -28,14 +28,14 @@ Clone the project and install the dependencies.
 [Troubleshooting](#use-dev-bookmarklet-1)
 
 
-![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/dev.gif)
+![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarklet-creator/master/project/dev.gif)
 
 ### 3. Develop and Test
 - Edit `bookmarklet.js` file and re-run the dev bookmarklet.
 
 [What's going on here?](#develop-and-test)<br>
 
-![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/edit.gif)
+![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarklet-creator/master/project/edit.gif)
 
 <br>
 
@@ -47,7 +47,7 @@ Clone the project and install the dependencies.
 - Save compiled version found in `dist/bookmarklet.min.js`
 
 
-![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/final.gif)
+![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarklet-creator/master/project/final.gif)
 
 <br>
 
