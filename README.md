@@ -19,15 +19,15 @@ Clone the project and install the dependencies.
 - In the project directory, run `npm start` in the terminal.
 
 <br>
-[What's going on here?]()<br>
-[Troubleshooting]()
+[What's going on here?](#start-local-server)<br>
+[Troubleshooting](#start-local-server-1)
 
 ### 2. Use Dev. Bookmarklet
 - Drag the development link to your bookmark bar
 
 <br>
-[What's going on here?]()<br>
-[Troubleshooting]()
+[What's going on here?](#use-dev-bookmarklet)<br>
+[Troubleshooting](#use-dev-bookmarklet-1)
 
 
 ![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/dev.gif)
@@ -36,8 +36,8 @@ Clone the project and install the dependencies.
 - Edit `bookmarklet.js` file and re-run the dev bookmarklet.
 
 <br>
-[What's going on here?]()<br>
-[Troubleshooting]()
+[What's going on here?](#develop-and-test)<br>
+[Troubleshooting](#develop-and-test-1)
 
 ![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/edit.gif)
 
@@ -56,23 +56,26 @@ Clone the project and install the dependencies.
 <br>
 
 ## What's going on here?
-##### Start local server
+
+#### Start local server
 - Starts a local & tunneled server to serve the assets your working on.
 - Starts gulp to compile script into bookmarklet
 
-##### Use Dev. Bookmarklet
+#### Use Dev. Bookmarklet
 - The dev bookmarklet injects `bookmarklet.js` into the desired page by using the tunnel server.
 
-##### Develop and Test
+#### Develop and Test
 - No description
 
-##### Save
+#### Save
 - No description
 
 <br>
+
 ## Troubleshooting
-##### Start local server
+
+#### Start local server
 - If you get a firewall error, retry npm start
 
-##### Use Dev. Bookmarklet
+#### Use Dev. Bookmarklet
 - You must use a new bookmarklet if your tunnel server changes.
