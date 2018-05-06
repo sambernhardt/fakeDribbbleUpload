@@ -17,11 +17,11 @@
     "gulp-rename": "^1.2.2",
     "gulp-template-generator": "^1.0.1",
     "localtunnel": "^1.9.0",
+    "mustache": "^2.3.0",
     "open": "0.0.5"
   },
   "dependencies": {
     "express": "^4.16.3",
-    "gulp-sass": "^4.0.1",
-    "mustache": "^2.3.0"
+    "gulp-sass": "^4.0.1"
   }
 }

@@ -23,6 +23,8 @@ Initialize the bookmarklet server and edit the `src/bookmarklet.js` file.
 ### 2. Drag the development link to your bookmarklet bar
 - The dev link is a bookmarklet that inserts an uncompiled version of your script (that's being provided by the tunnel server).
 
+![Development Bookmark](https://raw.githubusercontent.com/sambernhardt/bookmarkletCreator/master/project/dev.gif)
+
 ### 3. Edit the `bookmarklet.js` file and re-run the dev bookmarklet.
 - Just click the existing dev bookmarklet. The tunnel server will automatically deliver the correct code.
 
