@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var bookmarklet = require('gulp-bookmarklet');
 
 gulp.task('default', function(callback) {
-  gulp.watch(['src/bookmarklet.js'], ['scripts']);
+  gulp.watch('src/bookmarklet.js', gulp.series('scripts'));
 })
 
 gulp.task('scripts', function() {

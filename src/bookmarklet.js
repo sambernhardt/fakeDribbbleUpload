@@ -4,7 +4,6 @@ window.fakeDribbbleUpload = {
       .removeNode {color: salmon; font-weight: bold; cursor: pointer; pointerEvents: all;}\
       .removeNode:hover {opacity: .5};\
     '
-
     // add global styles
     var styleEl = document.createElement('style');
     styleEl.innerHTML = styles;
